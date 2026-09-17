@@ -1,8 +1,119 @@
 {
-  "updatedAt": "2026-09-17T09:00:00.000Z",
+  "updatedAt": "2026-09-17T05:06:48.503Z",
+  "deadline": {
+    "label": "18 ก.ย. 2569",
+    "daysLeft": 1,
+    "passed": false
+  },
   "totalQuota": 147,
-  "totalCollected": 0,
-  "unitsStarted": 0,
+  "totalCollected": 43,
+  "unitsStarted": 9,
   "unitsTotal": 15,
-  "units": []
+  "units": [
+    {
+      "unit": "กองพัฒนานักศึกษา",
+      "quota": 75,
+      "collected": 0,
+      "remaining": 75,
+      "pct": 0
+    },
+    {
+      "unit": "กองกลาง",
+      "quota": 15,
+      "collected": 15,
+      "remaining": 0,
+      "pct": 100
+    },
+    {
+      "unit": "กองคลัง",
+      "quota": 10,
+      "collected": 11,
+      "remaining": 0,
+      "pct": 110
+    },
+    {
+      "unit": "สถาบันวิจัยและพัฒนา (สวพ.)",
+      "quota": 10,
+      "collected": 0,
+      "remaining": 10,
+      "pct": 0
+    },
+    {
+      "unit": "คณะบริหารธุรกิจ",
+      "quota": 8,
+      "collected": 0,
+      "remaining": 8,
+      "pct": 0
+    },
+    {
+      "unit": "คณะเทคโนโลยีคหกรรมศาสตร์",
+      "quota": 6,
+      "collected": 0,
+      "remaining": 6,
+      "pct": 0
+    },
+    {
+      "unit": "สำนักวิทยบริการและเทคโนโลยีสารสนเทศ (สวส.)",
+      "quota": 6,
+      "collected": 6,
+      "remaining": 0,
+      "pct": 100
+    },
+    {
+      "unit": "สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.)",
+      "quota": 3,
+      "collected": 3,
+      "remaining": 0,
+      "pct": 100
+    },
+    {
+      "unit": "คณะครุศาสตร์อุตสาหกรรม",
+      "quota": 2,
+      "collected": 0,
+      "remaining": 2,
+      "pct": 0
+    },
+    {
+      "unit": "คณะเทคโนโลยีสื่อสารมวลชน",
+      "quota": 2,
+      "collected": 1,
+      "remaining": 1,
+      "pct": 50
+    },
+    {
+      "unit": "คณะวิทยาศาสตร์และเทคโนโลยี",
+      "quota": 2,
+      "collected": 0,
+      "remaining": 2,
+      "pct": 0
+    },
+    {
+      "unit": "คณะวิศวกรรมศาสตร์",
+      "quota": 2,
+      "collected": 1,
+      "remaining": 1,
+      "pct": 50
+    },
+    {
+      "unit": "คณะศิลปศาสตร์",
+      "quota": 2,
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
+    },
+    {
+      "unit": "คณะอุตสาหกรรมสิ่งทอและออกแบบแฟชั่น",
+      "quota": 2,
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
+    },
+    {
+      "unit": "คณะสถาปัตยกรรมศาสตร์และการออกแบบ",
+      "quota": 2,
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
+    }
+  ]
 }
