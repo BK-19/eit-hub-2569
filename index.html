@@ -116,6 +116,8 @@
   .card .who{font-size:13.5px;color:var(--purple2);font-weight:600;margin-top:3px}
   .card p{font-size:14.5px;color:var(--gray);margin-top:9px;flex:1}
   .prev{background:var(--tint);border:1px dashed var(--purple3);border-radius:8px;height:96px;margin-top:13px;display:flex;align-items:center;justify-content:center;color:var(--purple2);font-size:13.5px;text-align:center;padding:8px}
+  .prev.img{padding:0;border-style:solid;border-color:var(--line);overflow:hidden;background:#fff;height:150px}
+  .prev.img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
   .btns{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}
   .btn{font-family:'Prompt';font-weight:500;font-size:14px;padding:8px 14px;border-radius:6px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;transition:.15s}
   .btn:hover{filter:brightness(1.08)}
@@ -222,9 +224,12 @@
         <div class="card">
           <h4>การ์ดยืนยันตัวตนผู้จัดเก็บข้อมูล</h4>
           <div class="who">ส่งล่วงหน้าก่อนผู้จัดเก็บติดต่อ</div>
-          <p>บอกผู้ตอบว่าจะมีเจ้าหน้าที่ติดต่อช่วงใด ถามเรื่องอะไร และตรวจสอบกลับได้ที่ใด ลดโอกาสถูกเข้าใจผิดว่าเป็นมิจฉาชีพและปฏิเสธการตอบ</p>
-          <div class="prev">ตัวอย่างการ์ด<br>(ภาพ 1080×1080 สำหรับส่ง LINE)</div>
-          <div class="btns"><button class="btn">ดาวน์โหลดรูป</button><button class="btn out">คัดลอกข้อความ</button></div>
+          <p>บอกผู้ตอบว่าผู้จัดเก็บตัวจริงจะทำอะไรและจะไม่ทำอะไร พร้อม QR และเบอร์ตรวจสอบกลับ ลดโอกาสถูกเข้าใจผิดว่าเป็นมิจฉาชีพและปฏิเสธการตอบ</p>
+          <a class="prev img" href="verify.html"><img src="EIT69_verify_card.png" alt="ตัวอย่างการ์ดยืนยันตัวตนผู้จัดเก็บข้อมูล"></a>
+          <div class="btns">
+            <a class="btn" href="EIT69_verify_card.png" download>ดาวน์โหลดรูป</a>
+            <button class="btn out" onclick="copyVerify(this)">คัดลอกข้อความ</button>
+          </div>
         </div>
         <div class="card">
           <h4>อินโฟกราฟิก การประเมิน EIT คืออะไร</h4>
@@ -428,6 +433,26 @@ async function loadStatus(){
 loadStatus();
 
 render('coord');
+function copyVerify(b){
+  const t=`เรียน ผู้มีส่วนได้ส่วนเสียของมหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร
+
+มหาวิทยาลัยขอเสนอชื่อท่านเป็นผู้ตอบแบบวัดการรับรู้ของผู้มีส่วนได้ส่วนเสียภายนอก (EIT) ประจำปี 2569 ของสำนักงาน ป.ป.ช. โดยจะมีผู้จัดเก็บข้อมูลที่สำนักงาน ป.ป.ช. จ้าง ติดต่อท่านเพื่อสอบถามประสบการณ์ที่เคยติดต่อกับมหาวิทยาลัย
+
+เพื่อความปลอดภัย ขอแจ้งว่าผู้จัดเก็บตัวจริงจะไม่ขอเลขบัญชีธนาคาร รหัส OTP รหัสผ่าน และจะไม่ให้ท่านโอนเงินโดยเด็ดขาด หากมีการขอสิ่งเหล่านี้ กรุณาวางสายทันที
+
+ตรวจสอบรายละเอียดเพิ่มเติมได้ที่
+https://bk-19.github.io/eit-hub-2569/verify.html
+
+หรือโทรสอบถาม สวท. 0 2665 3777 ต่อ 6604 (จันทร์–ศุกร์ 08:30–16:30)
+
+การเข้าร่วมเป็นไปโดยสมัครใจ ท่านปฏิเสธได้โดยไม่มีผลกระทบใด ๆ ข้อมูลของท่านจะถูกลบภายใน 60 วันหลังประกาศผล
+
+ขอบคุณครับ`;
+  navigator.clipboard.writeText(t).then(()=>{
+    const o=b.textContent; b.textContent='คัดลอกแล้ว ✓';
+    setTimeout(()=>b.textContent=o,2000);
+  });
+}
 </script>
 </body>
 </html>
