@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ศูนย์รวมข้อมูล EIT 2569 — มทร.พระนคร</title>
+<meta name="description" content="กำหนดการ ขั้นตอน สื่อสำหรับผู้ตอบ คู่มือผู้ประสานงาน และสถานะความคืบหน้าของทุกหน่วยงาน รวมไว้ที่เดียว">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร">
+<meta property="og:title" content="ศูนย์รวมข้อมูล EIT 2569 — มทร.พระนคร">
+<meta property="og:description" content="กำหนดการ ขั้นตอน สื่อสำหรับผู้ตอบ คู่มือผู้ประสานงาน และสถานะความคืบหน้าของทุกหน่วยงาน รวมไว้ที่เดียว">
+<meta property="og:url" content="https://bk-19.github.io/eit-hub-2569/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#4B1E6E; --purple2:#6C3B9C; --purple3:#8E5FB8;
+    --gold:#D98A0B; --goldbg:#FBF0DA;
+    --page:#F6F3FA; --tint:#EFEAF5; --line:#E2DCEC;
+    --ink:#2A2135; --gray:#6C6579;
+    --green:#27AE60; --red:#E74C3C;
+    --shadow:0 2px 10px rgba(75,30,110,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--page);font-family:'Sarabun',sans-serif;color:var(--ink);line-height:1.65}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .ribbon{background:var(--ink);color:#D9C7EC;font-size:13px;text-align:center;padding:6px 20px;font-family:'Prompt';font-weight:500}
+
+  header{background:var(--purple);color:#fff}
+  .hbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px;flex-wrap:wrap}
+  .brand{font-family:'Prompt';font-weight:700;font-size:21px;line-height:1.3}
+  .brand small{display:block;font-family:'Sarabun';font-weight:400;font-size:14px;color:#D9C7EC;margin-top:2px}
+  .wm{background:#fff;color:var(--purple);font-family:'Prompt';font-weight:700;font-size:15px;padding:6px 15px;border-radius:4px;transform:skewX(-10deg);display:inline-block}
+  .wm span{display:inline-block;transform:skewX(10deg)}
+  .goldrule{height:4px;background:var(--gold)}
+
+  .hero{background:var(--purple);color:#fff;padding:8px 0 34px}
+  .hero h1{font-family:'Prompt';font-weight:700;font-size:33px;line-height:1.3;max-width:20ch}
+  .hero p{color:#D9C7EC;font-size:16px;margin-top:8px;max-width:56ch}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:24px}
+  .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:14px 16px}
+  .stat .n{font-family:'Prompt';font-weight:700;font-size:30px;line-height:1.1}
+  .stat .n em{font-style:normal;font-family:'Sarabun';font-weight:400;font-size:15px;color:#D9C7EC}
+  .stat .l{font-size:14px;color:#D9C7EC;margin-top:3px}
+  .stat.urgent{background:var(--goldbg);border-color:var(--gold)}
+  .stat.urgent .n,.stat.urgent .n em,.stat.urgent .l{color:#8A5806}
+  .bar{height:7px;background:rgba(255,255,255,.2);border-radius:99px;margin-top:9px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--gold);border-radius:99px;width:41%}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;padding-top:26px}
+  .tile{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:var(--shadow);border-top:4px solid var(--purple);text-decoration:none;color:inherit;display:block;transition:.15s}
+  .tile:hover{box-shadow:0 4px 16px rgba(75,30,110,.14)}
+  .tile.system{border-top-color:var(--gold)}
+  .tile h3{font-family:'Prompt';font-weight:600;font-size:18px;color:var(--purple)}
+  .tile p{font-size:14.5px;color:var(--gray);margin-top:5px}
+  .tag{display:inline-block;font-size:12.5px;padding:2px 9px;border-radius:99px;margin-top:10px;font-weight:600}
+  .tag.open{background:#E8F5EE;color:var(--green)}
+  .tag.lock{background:var(--tint);color:var(--purple2)}
+  .tag.go{background:var(--goldbg);color:#8A5806}
+
+  section{padding:40px 0 0}
+  .shead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:8px;margin-bottom:18px}
+  .shead h2{font-family:'Prompt';font-weight:600;font-size:24px;color:var(--purple)}
+  .shead span{font-size:14.5px;color:var(--gray)}
+
+  .ask{font-family:'Prompt';font-weight:600;font-size:17px;margin-bottom:11px}
+  .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+  .role{background:#fff;border:2px solid var(--line);border-radius:10px;padding:15px 17px;cursor:pointer;text-align:left;font-family:'Sarabun';transition:.15s}
+  .role b{display:block;font-family:'Prompt';font-weight:600;font-size:16.5px;color:var(--ink)}
+  .role span{display:block;font-size:13.5px;color:var(--gray);margin-top:2px}
+  .role:hover{border-color:var(--purple3)}
+  .role:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .role[aria-pressed="true"]{border-color:var(--purple);background:var(--tint)}
+  .role[aria-pressed="true"] b{color:var(--purple)}
+
+  .legend{display:flex;gap:20px;flex-wrap:wrap;margin:22px 0 4px;font-size:13.5px;color:var(--gray);align-items:center}
+  .legend i{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+  .legend .fix{background:var(--purple)}
+  .legend .tbc{background:#fff;border:2px dashed var(--gold)}
+
+  .tl{position:relative;margin-top:16px;padding-left:34px}
+  .tl::before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:var(--line)}
+  .ph{position:relative;margin-bottom:24px}
+  .ph::before{content:"";position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:var(--purple);border:4px solid var(--page)}
+  .ph.tbc::before{background:#fff;border:3px dashed var(--gold)}
+  .phead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .phead b{font-family:'Prompt';font-weight:600;font-size:18px;color:var(--purple)}
+  .phead .dt{font-family:'Prompt';font-weight:500;font-size:15px;background:var(--tint);padding:2px 11px;border-radius:99px}
+  .phead .wait{font-size:12.5px;font-weight:600;color:#8A5806;background:var(--goldbg);border:1px dashed var(--gold);padding:2px 10px;border-radius:99px}
+  .steps{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);margin-top:10px;overflow:hidden}
+  .ph.tbc .steps{border-style:dashed;border-color:#E8D2A8}
+  .st{display:flex;gap:13px;padding:12px 17px;border-bottom:1px solid var(--line)}
+  .st:last-child{border-bottom:none}
+  .st .no{flex:none;width:25px;height:25px;border-radius:50%;background:var(--tint);color:var(--purple);font-family:'Prompt';font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .st .tx{font-size:15.5px}
+  .st .tx cite{display:block;font-style:normal;font-size:13px;color:var(--purple2);margin-top:1px}
+  .warn{background:#FDECEA;border-left:5px solid var(--red);color:#7B2B21;font-size:14.5px;padding:11px 16px;margin-top:10px;border-radius:8px}
+  .warn b{font-family:'Prompt';font-weight:600}
+
+  /* media zone */
+  .tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .tab{background:none;border:none;font-family:'Prompt';font-weight:500;font-size:16px;color:var(--gray);padding:11px 18px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+  .tab[aria-selected="true"]{color:var(--purple);border-bottom-color:var(--purple);font-weight:600}
+  .tab:focus-visible{outline:2px solid var(--purple3);outline-offset:2px}
+  .panel{display:none;padding-top:22px}
+  .panel.on{display:block}
+  .note{border-radius:8px;padding:13px 17px;font-size:15px;margin-bottom:20px}
+  .note.pub{background:#E8F5EE;border-left:5px solid var(--green)}
+  .note.priv{background:#FDECEA;border-left:5px solid var(--red);color:#7B2B21}
+  .note b{font-family:'Prompt';font-weight:600}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .card h4{font-family:'Prompt';font-weight:600;font-size:17.5px}
+  .card .who{font-size:13.5px;color:var(--purple2);font-weight:600;margin-top:3px}
+  .card p{font-size:14.5px;color:var(--gray);margin-top:9px;flex:1}
+  .prev{background:var(--tint);border:1px dashed var(--purple3);border-radius:8px;height:96px;margin-top:13px;display:flex;align-items:center;justify-content:center;color:var(--purple2);font-size:13.5px;text-align:center;padding:8px}
+  .btns{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}
+  .btn{font-family:'Prompt';font-weight:500;font-size:14px;padding:8px 14px;border-radius:6px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;transition:.15s}
+  .btn:hover{filter:brightness(1.08)}
+  .btn.out{background:#fff;color:var(--purple)}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .lock{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+  .lrow{display:flex;align-items:center;gap:14px;padding:15px 20px;border-bottom:1px solid var(--line)}
+  .lrow:last-child{border-bottom:none}
+  .lrow .ic{width:34px;height:34px;border-radius:8px;background:var(--tint);color:var(--purple);flex:none;display:flex;align-items:center;justify-content:center;font-family:'Prompt';font-weight:700;font-size:15px}
+  .lrow .tx{flex:1;min-width:180px}
+  .lrow .tx b{font-family:'Prompt';font-weight:600;font-size:16px}
+  .lrow .tx span{display:block;font-size:14px;color:var(--gray)}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+  th{background:var(--purple);color:#fff;font-family:'Prompt';font-weight:600;font-size:14.5px;padding:11px 14px;text-align:left}
+  td{padding:11px 14px;font-size:15px;border-bottom:1px solid var(--line)}
+  tr:last-child td{border-bottom:none}
+  tr:nth-child(even) td{background:#FBFAFD}
+  .pill{font-size:13px;font-weight:600;padding:2px 10px;border-radius:99px}
+  .p-ok{background:#E8F5EE;color:var(--green)}
+  .p-mid{background:#FEF3DC;color:#B5730A}
+  .p-no{background:#FDECEA;color:var(--red)}
+
+  .loading{background:#fff;border:1px dashed var(--line);border-radius:10px;padding:26px;
+    text-align:center;color:var(--gray);font-size:14.5px}
+  #statusMeta{font-size:13px;color:var(--gray);margin-top:11px;display:flex;gap:6px;
+    align-items:center;flex-wrap:wrap}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+  .dot.stale{background:var(--gold)}
+  .mini{height:6px;background:var(--tint);border-radius:99px;overflow:hidden;min-width:64px}
+  .mini i{display:block;height:100%;background:var(--purple3);border-radius:99px}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  @media (max-width:640px){
+    table{display:block;overflow-x:auto;white-space:nowrap}
+  }
+  footer{margin-top:48px;background:#fff;border-top:1px solid var(--line);padding:22px 0;text-align:center}
+  footer .th{font-family:'Prompt';font-weight:500;font-size:14.5px;color:var(--purple)}
+  footer .en{font-size:13px;color:var(--gray);margin-top:2px}
+  footer .cc{font-size:13px;color:var(--gray);margin-top:9px}
+  @media (max-width:640px){.hero h1{font-size:26px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="ribbon" id="ribbon">กำลังเชื่อมต่อระบบกำกับฯ EIT …</div>
+
+<header>
+  <div class="wrap hbar">
+    <div class="brand">ศูนย์ข้อมูลการประเมิน EIT 2569
+      <small>สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.)</small></div>
+    <div class="wm"><span>RMUTP</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>ทุกอย่างที่ผู้ประสานงาน EIT ต้องใช้ อยู่ที่นี่ที่เดียว</h1>
+    <p>รู้ว่าตัวเองต้องทำอะไรเมื่อไร หยิบสื่อไปส่งผู้ตอบ และเข้าระบบกำกับฯ EIT จากหน้าเดียว</p>
+    <div class="stats">
+      <div class="stat urgent"><div class="n" id="sDays">– <em>วัน</em></div><div class="l">เหลือถึงกำหนดบันทึกรายชื่อ 18 ก.ย. 2569</div></div>
+      <div class="stat"><div class="n" id="sNames">– <em>/ 147</em></div><div class="l">รายชื่อที่บันทึกเข้าระบบแล้ว</div><div class="bar"><i id="sBar"></i></div></div>
+      <div class="stat"><div class="n" id="sUnits">– <em>/ 15</em></div><div class="l">หน่วยงานที่เริ่มบันทึกแล้ว</div></div>
+    </div>
+  </div>
+</div>
+<div class="goldrule"></div>
+
+<div class="wrap">
+  <div class="tiles">
+    <a class="tile" href="#plan"><h3>กำหนดการและขั้นตอน</h3><p>ดูว่าบทบาทของคุณต้องทำอะไร เมื่อไร</p><span class="tag open">เริ่มที่นี่</span></a>
+    <a class="tile" href="#media" data-tab="p1"><h3>สื่อสำหรับผู้ตอบ</h3><p>ส่งต่อให้ผู้มีส่วนได้ส่วนเสียภายนอกได้ทันที</p><span class="tag open">เปิดให้ทุกคน</span></a>
+    <a class="tile" href="#media" data-tab="p2"><h3>คู่มือผู้ประสานงาน</h3><p>คู่มือเทียบเกณฑ์ 17 ข้อ และคำถามที่พบบ่อย</p><span class="tag lock">เฉพาะผู้ประสานงาน</span></a>
+    <a class="tile system" href="https://script.google.com/macros/s/AKfycbxmiXczuYW9lmZ4UQpS_gl5BYqv7GuPO8oCGLT_ZRnBmV07YuHyG6c52Dwo8dyDiMOglA/exec" target="_blank" rel="noopener"><h3>ระบบกำกับฯ EIT (คลังรายชื่อ)</h3><p>บันทึกและติดตามสถานะรายชื่อของหน่วยงาน</p><span class="tag go">เข้าสู่ระบบ</span></a>
+  </div>
+
+  <!-- ===== PLAN ===== -->
+  <section id="plan">
+    <div class="shead"><h2>กำหนดการและขั้นตอนการดำเนินงาน</h2><span>เลือกบทบาทของคุณ เพื่อดูเฉพาะสิ่งที่คุณต้องทำ</span></div>
+    <div class="ask">คุณคือ</div>
+    <div class="roles">
+      <button class="role" data-r="coord" aria-pressed="true"><b>ผู้ประสานงานหน่วยงาน</b><span>คณะ กอง สำนัก ที่ได้รับโควตารายชื่อ</span></button>
+      <button class="role" data-r="resp" aria-pressed="false"><b>ผู้ตอบแบบวัด</b><span>ผู้มีส่วนได้ส่วนเสียภายนอก</span></button>
+      <button class="role" data-r="sec" aria-pressed="false"><b>สวท. ฝ่ายเลขานุการ</b><span>กำกับติดตามและตรวจสอบข้อมูล</span></button>
+    </div>
+    <div class="legend">
+      <span><i class="fix"></i>วันที่ยืนยันแล้ว</span>
+      <span><i class="tbc"></i>ช่วงเวลาคาดการณ์ รอ Third Party ยืนยัน</span>
+    </div>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <!-- ===== MEDIA ===== -->
+  <section id="media">
+    <div class="shead"><h2>คลังสื่อและคู่มือ</h2><span>แบ่งเป็น 2 โซนตามระดับการเข้าถึง</span></div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p1" id="t1">สื่อสำหรับผู้ตอบ</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2">คู่มือผู้ประสานงาน</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3">สถานะหน่วยงาน</button>
+    </div>
+
+    <div class="panel on" id="p1" role="tabpanel" aria-labelledby="t1">
+      <div class="note pub"><b>ส่งต่อได้</b> — สื่อในโซนนี้ออกแบบมาให้ผู้ประสานงานส่งให้ผู้ตอบโดยตรง ผ่าน LINE อีเมล หรือพิมพ์แจก</div>
+      <div class="cards">
+        <div class="card">
+          <h4>การ์ดยืนยันตัวตนผู้จัดเก็บข้อมูล</h4>
+          <div class="who">ส่งล่วงหน้าก่อนผู้จัดเก็บติดต่อ</div>
+          <p>บอกผู้ตอบว่าจะมีเจ้าหน้าที่ติดต่อช่วงใด ถามเรื่องอะไร และตรวจสอบกลับได้ที่ใด ลดโอกาสถูกเข้าใจผิดว่าเป็นมิจฉาชีพและปฏิเสธการตอบ</p>
+          <div class="prev">ตัวอย่างการ์ด<br>(ภาพ 1080×1080 สำหรับส่ง LINE)</div>
+          <div class="btns"><button class="btn">ดาวน์โหลดรูป</button><button class="btn out">คัดลอกข้อความ</button></div>
+        </div>
+        <div class="card">
+          <h4>อินโฟกราฟิก การประเมิน EIT คืออะไร</h4>
+          <div class="who">ใช้ได้กับผู้ตอบทุกกลุ่ม</div>
+          <p>อธิบาย 5 เรื่องในหน้าเดียว ใครเป็นผู้ประเมิน ถามใคร ถามเรื่องอะไร ใช้เวลาเท่าไร และข้อมูลถูกเก็บรักษาอย่างไร</p>
+          <div class="prev">ตัวอย่างอินโฟกราฟิก<br>(A4 พิมพ์แจกได้ และไฟล์ภาพสำหรับ LINE)</div>
+          <div class="btns"><button class="btn">ดาวน์โหลดรูป</button><button class="btn out">เปิดไฟล์ PDF</button></div>
+        </div>
+        <div class="card">
+          <h4>ข้อความกลางสำหรับส่ง LINE</h4>
+          <div class="who">แยก 3 เวอร์ชันตามกลุ่มผู้ตอบ</div>
+          <p>ข้อความสำเร็จรูปสำหรับนักศึกษาและศิษย์เก่า บริษัทคู่ค้า และกลุ่มแม่บ้าน รปภ. ผู้รับเหมา ปรับระดับภาษาให้เหมาะกับแต่ละกลุ่มแล้ว</p>
+          <div class="prev">เลือกกลุ่มผู้ตอบ แล้วกดคัดลอก<br>วางส่งได้ทันทีโดยไม่ต้องแก้</div>
+          <div class="btns"><button class="btn">คัดลอกข้อความ</button><button class="btn out">ดูทั้ง 3 เวอร์ชัน</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2">
+      <div class="note priv"><b>ห้ามส่งต่อผู้ตอบ</b> — เอกสารในโซนนี้ใช้เพื่อให้ผู้ประสานงานตอบข้อสงสัยได้ถูกต้องเท่านั้น การส่งให้ผู้ตอบโดยตรงถือเป็นการชี้นำ ซึ่งขัดกับแนวทางที่คณะกรรมการกำหนดไว้</div>
+      <div class="lock">
+        <div class="lrow"><div class="ic">17</div><div class="tx"><b>คู่มือเทียบเกณฑ์คะแนนคำถาม 17 ข้อ</b><span>แต่ละข้อวัดอะไร ข้อเท็จจริงที่มหาวิทยาลัยดำเนินการจริงคืออะไร พร้อมหลักฐานอ้างอิง</span></div><a class="btn out" href="https://bk-19.github.io/eit-questions-2569/" target="_blank" rel="noopener">เปิดอ่าน</a></div>
+        <div class="lrow"><div class="ic">Q</div><div class="tx"><b>คำถามที่ผู้ตอบมักถาม พร้อมคำตอบมาตรฐาน</b><span>ตอบแล้วมีผลกับฉันไหม ข้อมูลจะรั่วไหลไหม ไม่ทราบเรื่องนี้ควรตอบอย่างไร</span></div><button class="btn out">เปิดอ่าน</button></div>
+        <div class="lrow"><div class="ic">A</div><div class="tx"><b>เกณฑ์ให้เกรดความพร้อมผู้ตอบ</b><span>วิธีตัดเกรด A+ A B+ จากความร่วมมือและความถี่ในการติดต่อ ไม่ใช่จากแนวโน้มคำตอบ</span></div><button class="btn out">เปิดอ่าน</button></div>
+        <div class="lrow"><div class="ic">P</div><div class="tx"><b>แนวปฏิบัติ PDPA สำหรับผู้ประสานงาน</b><span>ข้อมูลส่วนบุคคลต้องผ่านระบบ สวท. เท่านั้น และจะถูกลบภายใน 60 วันหลังประกาศผล</span></div><button class="btn out">เปิดอ่าน</button></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3">
+      <div class="note pub">ตัวเลขภาพรวมความคืบหน้าของทุกหน่วยงาน อัปเดตอัตโนมัติจากระบบกำกับฯ EIT ทุกชั่วโมง · รายชื่อรายบุคคลดูได้ในระบบเท่านั้น</div>
+      <div id="statusBox" class="loading">กำลังโหลดข้อมูล …</div>
+      <div id="statusMeta"></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="th">มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร</div>
+    <div class="en">Rajamangala University of Technology Phra Nakhon</div>
+    <div class="cc">ข้อมูลส่วนบุคคลของผู้ตอบจะถูกลบภายใน 60 วัน นับแต่วันที่สำนักงาน ป.ป.ช. ประกาศผลคะแนนอย่างเป็นทางการ</div>
+  </div>
+</footer>
+
+<script>
+const DATA={
+ coord:[
+  {t:"ช่วงที่ 1 เตรียมและบันทึกคลังรายชื่อ",d:"ตอนนี้ – ศุกร์ 18 ก.ย.",tbc:false,
+   s:[["เข้ากลุ่ม LINE OpenChat ผู้ประสานงาน EIT 69 ผ่าน QR Code",""],
+      ["แจ้งชื่อผู้ประสานงานหลักกลับ สวท.",""],
+      ["สำรวจและคัดเลือกรายชื่อผู้ตอบตามโควตาของหน่วยงาน",""],
+      ["บันทึกรายชื่อผู้ตอบเข้าระบบกำกับฯ EIT (คลังรายชื่อ) ของ สวท. กรอกชื่อ เบอร์ หน่วยงาน ก่อนได้",""],
+      ["สื่อสารชี้แจงผู้ตอบล่วงหน้า กันการเข้าใจผิดว่าเป็นมิจฉาชีพ",""]],
+   w:"ห้ามพิมพ์หรือส่งไฟล์ข้อมูลส่วนบุคคลในกลุ่ม LINE ให้บันทึกผ่านระบบ สวท. เท่านั้น"},
+  {t:"ช่วงที่ 2 ระหว่าง Third Party จัดเก็บข้อมูล",d:"19 – 30 ก.ย.",tbc:true,
+   s:[["แจ้งผู้ตอบเมื่อทราบกำหนดการจริงจาก Third Party",""],
+      ["ตอบข้อสงสัยเรื่องกระบวนการ หรือกรณีผู้ตอบสงสัยว่าเป็นมิจฉาชีพ",""],
+      ["แจ้ง สวท. ทันทีหากผู้ตอบติดต่อไม่ได้ เพื่อใช้รายชื่อสำรอง",""]]}],
+
+ resp:[
+  {t:"ช่วงที่ 1 ก่อนถูกติดต่อ",d:"ตอนนี้ – 18 ก.ย.",tbc:false,
+   s:[["ได้รับข้อความชี้แจงจากผู้ประสานงานหน่วยงาน",""],
+      ["ทราบว่าผู้จัดเก็บข้อมูลคือหน่วยงานที่ ป.ป.ช. มอบหมาย ไม่ใช่มิจฉาชีพ",""],
+      ["หากไม่แน่ใจ ตรวจสอบกลับได้ที่ผู้ประสานงาน",""]]},
+  {t:"ช่วงที่ 2 เมื่อถูกติดต่อ",d:"19 – 30 ก.ย.",tbc:true,
+   s:[["ผู้จัดเก็บติดต่อผ่านช่องทางใดช่องทางหนึ่งใน 4 รูปแบบ (ลงพื้นที่ สัมภาษณ์ออนไลน์ โทรศัพท์หรืออีเมล และสำรวจภาคสนาม)",""],
+      ["ตอบตามประสบการณ์จริงที่ติดต่อหรือได้รับบริการจากมหาวิทยาลัย",""]]}],
+
+ sec:[
+  {t:"ช่วงที่ 1 เปิดระบบ ติดตาม และตรวจสอบ",d:"ตอนนี้ – ศุกร์ 18 ก.ย.",tbc:false,
+   s:[["เปิดสิทธิ์ใช้ระบบให้ผู้ประสานงานทุกหน่วยงาน",""],
+      ["จัดทำ Key Message และสื่อกลาง เช่น ข้อความ อินโฟกราฟิก และคู่มือเทียบเกณฑ์คะแนน 17 ข้อ",""],
+      ["ติดตามความคืบหน้ารายวัน และรายงานผู้บริหารเพื่อกำกับ",""],
+      ["ตรวจสอบความถูกต้องรายชื่อตามเกณฑ์",""],
+      ["ประสาน Third Party เรื่อง format ข้อมูลและกำหนดการ",""]]},
+  {t:"ช่วงที่ 2 ส่งมอบและสนับสนุนการเก็บข้อมูล",d:"19 – 30 ก.ย.",tbc:true,
+   s:[["จัดลำดับรายชื่อตามเกณฑ์ แล้วส่งให้ Third Party",""],
+      ["เป็นศูนย์กลางแก้ปัญหาเฉพาะหน้าช่วงเก็บข้อมูล",""],
+      ["สำรองรายชื่อทดแทน กรณีติดต่อผู้ตอบไม่ได้",""]]},
+  {t:"ช่วงที่ 3 ปิดงานและส่งคืนความเชื่อมั่น",d:"หลัง 30 ก.ย.",tbc:false,
+   s:[["ลบข้อมูลส่วนบุคคลภายใน 60 วันหลังประกาศผล",""],
+      ["ทำหนังสือแจ้งผลคะแนนและขอบคุณ",""]]}]
+};
+
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function render(role){
+  document.getElementById('tl').innerHTML=DATA[role].map(p=>`
+    <div class="ph${p.tbc?' tbc':''}">
+      <div class="phead"><b>${esc(p.t)}</b><span class="dt">${esc(p.d)}</span>
+        ${p.tbc?'<span class="wait">รอยืนยันจาก Third Party</span>':''}</div>
+      <div class="steps">${p.s.map((x,i)=>`<div class="st"><div class="no">${i+1}</div>
+        <div class="tx">${esc(x[0])}${x[1]?`<cite>${esc(x[1])}</cite>`:''}</div></div>`).join('')}</div>
+      ${p.w?`<div class="warn"><b>ข้อห้าม</b> ${esc(p.w)}</div>`:''}
+    </div>`).join('');
+}
+document.querySelectorAll('.role').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.role').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  render(b.dataset.r);
+}));
+const tabs=[...document.querySelectorAll('.tab')];
+function activateTab(panelId){
+  tabs.forEach(t=>t.setAttribute('aria-selected',t.getAttribute('aria-controls')===panelId));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===panelId));
+}
+tabs.forEach(t=>t.addEventListener('click',()=>activateTab(t.getAttribute('aria-controls'))));
+document.querySelectorAll('.tile[data-tab]').forEach(tile=>{
+  tile.addEventListener('click',e=>{
+    e.preventDefault();
+    activateTab(tile.dataset.tab);
+    document.getElementById('media').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ─── สถานะหน่วยงาน · อ่านจาก status.json ที่ GAS push ขึ้น repo ทุกชั่วโมง ─── */
+const DEADLINE='2026-09-18';
+
+function daysLeft(){
+  const d=new Date(DEADLINE+'T00:00:00+07:00');
+  const n=new Date();
+  const t=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  return Math.round((d-t)/86400000);
+}
+
+function pill(u){
+  if(u.collected>=u.quota) return '<span class="pill p-ok">ครบแล้ว</span>';
+  if(u.collected>0)        return '<span class="pill p-mid">กำลังบันทึก</span>';
+  return '<span class="pill p-no">ยังไม่เริ่ม</span>';
+}
+
+function setNum(id,main,sub){
+  const el=document.getElementById(id);
+  if(el) el.innerHTML=main+(sub?' <em>'+sub+'</em>':'');
+}
+
+function renderStatus(d){
+  const box=document.getElementById('statusBox');
+  box.className='';
+
+  // ยังไม่มีหน่วยงานใดในระบบ — แสดงข้อความ ไม่ใช่ตารางที่มีแต่แถวรวม
+  if(!d.units.length){
+    box.innerHTML='<div class="loading">ระบบเชื่อมต่อแล้ว แต่ยังไม่มีข้อมูลหน่วยงาน<br>'
+      +'<span style="font-size:13px">ตารางจะขึ้นอัตโนมัติเมื่อระบบกำกับฯ ส่งข้อมูลรอบแรก</span></div>';
+    setNum('sNames', d.totalCollected, '/ '+d.totalQuota);
+    setNum('sUnits', d.unitsStarted,   '/ '+d.unitsTotal);
+    metaLine(d);
+    return;
+  }
+
+  box.innerHTML='<table><tr><th>หน่วยงาน</th><th>โควตา</th><th>บันทึกแล้ว</th>'
+    +'<th>คงเหลือ</th><th>ความคืบหน้า</th><th>สถานะ</th></tr>'
+    +d.units.map(u=>'<tr><td>'+esc(u.unit)+'</td>'
+      +'<td class="num">'+u.quota+'</td>'
+      +'<td class="num">'+u.collected+'</td>'
+      +'<td class="num">'+u.remaining+'</td>'
+      +'<td><div class="mini"><i style="width:'+Math.min(100,u.pct)+'%"></i></div></td>'
+      +'<td>'+pill(u)+'</td></tr>').join('')
+    +'<tr><td><b>รวมทั้งสิ้น</b></td><td class="num"><b>'+d.totalQuota+'</b></td>'
+    +'<td class="num"><b>'+d.totalCollected+'</b></td>'
+    +'<td class="num"><b>'+(d.totalQuota-d.totalCollected)+'</b></td>'
+    +'<td colspan="2"></td></tr></table>';
+
+  // hero
+  setNum('sNames', d.totalCollected, '/ '+d.totalQuota);
+  setNum('sUnits', d.unitsStarted,   '/ '+d.unitsTotal);
+  const bar=document.getElementById('sBar');
+  if(bar) bar.style.width=Math.min(100,d.totalCollected/d.totalQuota*100)+'%';
+
+  metaLine(d);
+}
+
+// เตือนถ้าข้อมูลเก่าเกิน 3 ชม.
+function metaLine(d){
+  const t=new Date(d.updatedAt);
+  const hrs=(Date.now()-t)/3600000;
+  document.getElementById('statusMeta').innerHTML=
+    '<span class="dot'+(hrs>3?' stale':'')+'"></span>'
+    +'ข้อมูล ณ '+t.toLocaleString('th-TH',{dateStyle:'medium',timeStyle:'short'})
+    +(hrs>3?' · ข้อมูลอาจไม่เป็นปัจจุบัน':'');
+  document.getElementById('ribbon').textContent=
+    'เชื่อมต่อระบบกำกับฯ EIT แล้ว · อัปเดตอัตโนมัติทุกชั่วโมง';
+}
+
+function statusFailed(){
+  document.getElementById('statusBox').outerHTML=
+    '<div class="note priv" id="statusBox"><b>ยังดึงข้อมูลไม่ได้</b> — '
+    +'กรุณาเปิดระบบกำกับฯ EIT โดยตรงเพื่อดูสถานะล่าสุด</div>';
+  document.getElementById('statusMeta').textContent='';
+  document.getElementById('ribbon').textContent=
+    'ตัวเลขความคืบหน้ายังไม่พร้อมแสดง · กำหนดบันทึกรายชื่อ 18 ก.ย. 2569';
+}
+
+async function loadStatus(){
+  const n=daysLeft();
+  setNum('sDays', n<0?'เลยกำหนด':n, n<0?'':'วัน');
+  try{
+    const r=await fetch('status.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok) throw 0;
+    const d=await r.json();
+    if(!d||!Array.isArray(d.units)) throw 0;
+    renderStatus(d);
+  }catch(e){ statusFailed(); }
+}
+loadStatus();
+
+render('coord');
+</script>
+</body>
+</html>
