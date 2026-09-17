@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ข้อความกลางสำหรับส่ง LINE — EIT 2569</title>
+<meta name="description" content="ข้อความสำเร็จรูป 4 เวอร์ชันตามกลุ่มผู้ตอบ สำหรับผู้ประสานงาน EIT 2569 ส่งให้ผู้มีส่วนได้ส่วนเสียภายนอก">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร">
+<meta property="og:title" content="ข้อความกลางสำหรับส่ง LINE — EIT 2569">
+<meta property="og:description" content="ข้อความสำเร็จรูป 4 เวอร์ชันตามกลุ่มผู้ตอบ เลือกกลุ่ม เติมชื่อ กดคัดลอก">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#4B1E6E; --purple2:#6C3B9C; --purple3:#8E5FB8;
+    --gold:#D98A0B; --goldbg:#FBF0DA;
+    --page:#F6F3FA; --tint:#EFEAF5; --line:#E2DCEC;
+    --ink:#2A2135; --gray:#6C6579;
+    --green:#1E8E4E; --greenbg:#E6F4EC;
+    --red:#C0392B; --redbg:#FBEAE7;
+    --shadow:0 2px 12px rgba(75,30,110,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--page);font-family:'Sarabun',sans-serif;color:var(--ink);line-height:1.65}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+
+  header{background:var(--purple);color:#fff}
+  .hbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:14px;flex-wrap:wrap}
+  .brand{font-family:'Prompt';font-weight:700;font-size:19px;line-height:1.3}
+  .brand small{display:block;font-family:'Sarabun';font-weight:400;font-size:13.5px;color:#D9C7EC;margin-top:2px}
+  .back{color:#D9C7EC;text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.3);
+    padding:7px 14px;border-radius:99px;white-space:nowrap}
+  .back:hover{background:rgba(255,255,255,.12);color:#fff}
+  .goldrule{height:4px;background:var(--gold)}
+
+  .hero{background:var(--purple);color:#fff;padding:4px 0 30px}
+  .hero h1{font-family:'Prompt';font-weight:700;font-size:28px;line-height:1.32}
+  .hero p{color:#D9C7EC;font-size:15.5px;margin-top:8px;max-width:62ch}
+
+  main{padding:26px 0 60px}
+
+  .how{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:18px 22px;margin-bottom:20px}
+  .how h2{font-family:'Prompt';font-weight:600;font-size:16px;margin-bottom:10px}
+  .how ol{list-style:none;display:grid;gap:8px;counter-reset:h}
+  .how li{display:flex;gap:10px;align-items:flex-start;font-size:14.8px}
+  .how li::before{counter-increment:h;content:counter(h);flex:none;width:21px;height:21px;border-radius:50%;
+    background:var(--gold);color:#fff;font-size:12px;font-weight:700;display:flex;
+    align-items:center;justify-content:center;margin-top:3px}
+  .how code{background:var(--goldbg);color:#96600A;font-family:ui-monospace,monospace;
+    font-size:.92em;padding:1px 6px;border-radius:4px;font-weight:600}
+
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .tab{font-family:'Prompt';font-weight:500;font-size:14.5px;padding:10px 18px;border-radius:99px;
+    border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;line-height:1.3}
+  .tab:hover{border-color:var(--purple3)}
+  .tab[aria-selected="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+
+  .msg{display:none}
+  .msg.on{display:block}
+
+  .meta{background:var(--tint);border-left:4px solid var(--purple3);border-radius:0 10px 10px 0;
+    padding:13px 17px;font-size:14.5px;margin-bottom:14px}
+  .meta b{font-family:'Prompt';font-weight:600;color:var(--purple)}
+
+  .box{background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+  .box .bar{background:var(--tint);padding:11px 18px;display:flex;align-items:center;
+    justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}
+  .box .bar .t{font-family:'Prompt';font-weight:600;font-size:14.5px;color:var(--purple)}
+  .btn{font-family:'Prompt';font-weight:500;font-size:14px;padding:9px 20px;border-radius:99px;
+    border:0;background:var(--purple);color:#fff;cursor:pointer;white-space:nowrap}
+  .btn:hover{background:var(--purple2)}
+  .btn.done{background:var(--green)}
+  pre{font-family:'Sarabun',sans-serif;font-size:15.3px;line-height:1.75;padding:20px 22px;
+    white-space:pre-wrap;word-break:break-word}
+  pre mark{background:var(--goldbg);color:#96600A;font-weight:600;padding:1px 4px;border-radius:4px}
+
+  .attach{background:var(--greenbg);border-left:4px solid var(--green);border-radius:0 10px 10px 0;
+    padding:13px 17px;font-size:14.5px;margin-top:14px}
+  .attach b{color:#166B3B;font-family:'Prompt';font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 40px;text-align:center;color:var(--gray);font-size:13.5px}
+  footer b{font-family:'Prompt';font-weight:600;color:var(--ink);display:block;font-size:15px;margin-bottom:4px}
+
+  @media (max-width:600px){
+    .hero h1{font-size:23px}
+    .tab{font-size:13.5px;padding:9px 14px}
+    pre{font-size:14.6px;padding:16px 17px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbar">
+    <div class="brand">มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร<small>สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.)</small></div>
+    <a class="back" href="./">&larr; กลับศูนย์รวมข้อมูล EIT</a>
+  </div>
+</header>
+<div class="goldrule"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>ข้อความกลางสำหรับส่ง LINE</h1>
+    <p>4 เวอร์ชันตามกลุ่มผู้ตอบ ปรับระดับภาษาและประเด็นที่แต่ละกลุ่มกังวลไว้แล้ว เลือกกลุ่ม เติมชื่อ กดคัดลอก</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="how">
+    <h2>วิธีใช้</h2>
+    <ol>
+      <li>เลือกกลุ่มผู้ตอบจากปุ่มด้านล่าง</li>
+      <li>กด <b>คัดลอกข้อความ</b> แล้ววางในแชท LINE</li>
+      <li>แทนที่ <code>[ชื่อ]</code> และ <code>[งานที่เคยติดต่อ]</code> ด้วยข้อมูลจริงก่อนส่ง</li>
+      <li>แนบอินโฟกราฟิกและการ์ดยืนยันตัวตนไปพร้อมกัน</li>
+    </ol>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true"  data-m="m1">นักศึกษา · ศิษย์เก่า</button>
+    <button class="tab" role="tab" aria-selected="false" data-m="m2">บริษัทคู่ค้า · ผู้ขาย</button>
+    <button class="tab" role="tab" aria-selected="false" data-m="m3">แม่บ้าน · รปภ. · ผู้รับเหมา</button>
+    <button class="tab" role="tab" aria-selected="false" data-m="m4">เครือข่าย MOU · หน่วยงานรัฐ</button>
+  </div>
+
+  <div class="msg on" id="m1">
+    <div class="meta"><b>กลุ่มนี้กังวลเรื่อง</b> — เสียเวลา และรู้สึกว่าเป็นงานเพิ่ม · ข้อความจึงสั้น เป็นกันเอง และบอกเวลาชัดตั้งแต่ประโยคแรก</div>
+    <div class="box">
+      <div class="bar"><span class="t">นักศึกษา · ศิษย์เก่า</span><button class="btn" data-c="m1">คัดลอกข้อความ</button></div>
+      <pre id="t-m1">สวัสดีครับ <mark>[ชื่อ]</mark> มีเรื่องขอความร่วมมือสั้น ๆ ประมาณ 10 นาทีครับ
+
+สำนักงาน ป.ป.ช. กำลังประเมินความโปร่งใสของมหาวิทยาลัย ประจำปี 2569 โดยถามจากคนที่เคยติดต่อหรือใช้บริการจริง ซึ่ง <mark>[ชื่อ]</mark> อยู่ในกลุ่มนี้ครับ
+
+จะมีเจ้าหน้าที่ที่ ป.ป.ช. จ้าง ติดต่อไปสอบถามประสบการณ์ที่เคยติดต่อกับมหาวิทยาลัย ไม่ใช่การสอบ ไม่มีคำตอบถูกผิด และไม่มีผลกับผลการเรียนหรือสถานะใด ๆ ครับ
+
+เพื่อความปลอดภัย เจ้าหน้าที่ตัวจริงจะไม่ขอเลขบัญชี รหัส OTP หรือให้โอนเงินเด็ดขาด ถ้าเจอแบบนั้นวางสายได้เลยครับ
+
+รายละเอียดเพิ่มเติม
+https://bk-19.github.io/eit-hub-2569/verify.html
+
+ตอบหรือไม่ตอบก็ได้ครับ ไม่มีผลใด ๆ และข้อมูลจะถูกลบภายใน 60 วันหลังประกาศผล
+
+ขอบคุณมากครับ</pre>
+    </div>
+  </div>
+
+  <div class="msg" id="m2">
+    <div class="meta"><b>กลุ่มนี้กังวลเรื่อง</b> — กลัวกระทบสัญญาหรือโอกาสในการประมูลครั้งต่อไป · ข้อความจึงเป็นทางการ และระบุชัดว่าไม่เกี่ยวกับการจัดซื้อจัดจ้าง</div>
+    <div class="box">
+      <div class="bar"><span class="t">บริษัทคู่ค้า · ผู้ขาย · ผู้รับจ้าง</span><button class="btn" data-c="m2">คัดลอกข้อความ</button></div>
+      <pre id="t-m2">เรียน <mark>[ชื่อ]</mark>
+
+มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร ขอเรียนแจ้งเรื่องการประเมินคุณธรรมและความโปร่งใสในการดำเนินงานของหน่วยงานภาครัฐ (ITA) ประจำปีงบประมาณ 2569 ของสำนักงาน ป.ป.ช. ครับ
+
+การประเมินส่วนนี้เก็บข้อมูลจากผู้มีส่วนได้ส่วนเสียภายนอกที่เคยติดต่อกับมหาวิทยาลัย ซึ่งบริษัทของท่านเคยติดต่อในเรื่อง <mark>[งานที่เคยติดต่อ]</mark> จึงอยู่ในกลุ่มผู้ให้ข้อมูล
+
+จะมีผู้จัดเก็บข้อมูลที่สำนักงาน ป.ป.ช. จ้าง ติดต่อไปสอบถามประสบการณ์การติดต่อกับมหาวิทยาลัย ใช้เวลาประมาณ 10–15 นาที
+
+ขอเรียนว่า การตอบหรือไม่ตอบ และคำตอบที่ให้ ไม่มีผลต่อสัญญาที่มีอยู่ การพิจารณาจัดซื้อจัดจ้าง หรือความสัมพันธ์ทางธุรกิจกับมหาวิทยาลัยแต่อย่างใด มหาวิทยาลัยได้รับเฉพาะคะแนนภาพรวม ไม่เห็นคำตอบรายบุคคล
+
+เพื่อความปลอดภัย ผู้จัดเก็บตัวจริงจะไม่ขอเลขบัญชีธนาคาร รหัส OTP รหัสผ่าน และจะไม่ให้โอนเงินโดยเด็ดขาด
+
+ตรวจสอบรายละเอียดได้ที่
+https://bk-19.github.io/eit-hub-2569/verify.html
+หรือโทร. 0 2665 3777 ต่อ 6604
+
+ข้อมูลของท่านใช้เพื่อการประเมินครั้งนี้เท่านั้น และจะถูกลบภายใน 60 วันหลังประกาศผล
+
+ขอขอบพระคุณในความร่วมมือครับ</pre>
+    </div>
+  </div>
+
+  <div class="msg" id="m3">
+    <div class="meta"><b>กลุ่มนี้กังวลเรื่อง</b> — กลัวโดนหลอก และกลัวว่าถ้าพูดไม่ดีจะกระทบงานหรือการต่อสัญญา · ข้อความจึงใช้ภาษาพูด สั้น และแก้ความกลัวทั้งสองข้อตั้งแต่ต้น</div>
+    <div class="box">
+      <div class="bar"><span class="t">แม่บ้าน · รปภ. · ผู้รับเหมา · พนักงานจ้างเหมา</span><button class="btn" data-c="m3">คัดลอกข้อความ</button></div>
+      <pre id="t-m3">สวัสดีครับ <mark>[ชื่อ]</mark>
+
+เร็ว ๆ นี้จะมีเจ้าหน้าที่โทรมาถามเรื่องงานที่ทำกับมหาวิทยาลัยนะครับ ไม่ต้องตกใจ ไม่ใช่มิจฉาชีพครับ
+
+เป็นการสำรวจของสำนักงาน ป.ป.ช. ที่มาถามว่าติดต่องานกับมหาวิทยาลัยแล้วสะดวกไหม ได้รับการดูแลดีไหม ตอบตามที่เจอจริงได้เลยครับ
+
+ที่สำคัญ ตอบยังไงก็ได้ ไม่มีผลกับงาน ไม่มีผลกับการต่อสัญญา และมหาวิทยาลัยไม่รู้ว่าใครตอบอะไรครับ
+
+ไม่ต้องเตรียมอะไรเลย ใช้เวลาประมาณ 10–15 นาที ถ้าไม่สะดวกจะไม่ตอบก็ได้ครับ
+
+ข้อควรระวัง ถ้าคนที่โทรมาขอเลขบัญชี ขอรหัส OTP หรือให้โอนเงิน แสดงว่าไม่ใช่ตัวจริง ให้วางสายแล้วโทรบอกผมได้เลยครับ
+
+อ่านเพิ่มเติมได้ที่
+https://bk-19.github.io/eit-hub-2569/verify.html
+
+ขอบคุณมากครับ</pre>
+    </div>
+  </div>
+
+  <div class="msg" id="m4">
+    <div class="meta"><b>กลุ่มนี้กังวลเรื่อง</b> — ชื่อเสียงของหน่วยงานตนเอง และความเหมาะสมที่จะให้ความเห็นต่อหน่วยงานพันธมิตร · ข้อความจึงเน้นว่าเป็นกลไกปกติของภาครัฐ และคำตอบไม่ผูกพันหน่วยงานต้นสังกัด</div>
+    <div class="box">
+      <div class="bar"><span class="t">เครือข่าย MOU · หน่วยงานของรัฐ</span><button class="btn" data-c="m4">คัดลอกข้อความ</button></div>
+      <pre id="t-m4">เรียน <mark>[ชื่อ]</mark>
+
+มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร ขอเรียนแจ้งเรื่องการประเมินคุณธรรมและความโปร่งใสในการดำเนินงานของหน่วยงานภาครัฐ (ITA) ประจำปีงบประมาณ 2569 ของสำนักงาน ป.ป.ช.
+
+ในฐานะที่หน่วยงานของท่านมีความร่วมมือกับมหาวิทยาลัยในเรื่อง <mark>[งานที่เคยติดต่อ]</mark> ท่านจึงอยู่ในกลุ่มผู้มีส่วนได้ส่วนเสียภายนอกที่จะได้รับการสอบถาม
+
+ผู้จัดเก็บข้อมูลที่สำนักงาน ป.ป.ช. จ้าง จะติดต่อไปสอบถามประสบการณ์การประสานงานร่วมกับมหาวิทยาลัย ใช้เวลาประมาณ 10–15 นาที
+
+การให้ข้อมูลเป็นความเห็นส่วนบุคคลจากประสบการณ์การทำงานร่วมกัน ไม่ผูกพันหน่วยงานต้นสังกัดของท่าน และไม่มีผลต่อความร่วมมือที่มีอยู่ มหาวิทยาลัยได้รับเฉพาะคะแนนภาพรวม ไม่เห็นคำตอบรายบุคคล
+
+เพื่อความปลอดภัย ผู้จัดเก็บตัวจริงจะไม่ขอเลขบัญชีธนาคาร รหัส OTP รหัสผ่าน และจะไม่ให้โอนเงินโดยเด็ดขาด
+
+ตรวจสอบรายละเอียดได้ที่
+https://bk-19.github.io/eit-hub-2569/verify.html
+หรือโทร. 0 2665 3777 ต่อ 6604
+
+ข้อมูลของท่านใช้เพื่อการประเมินครั้งนี้เท่านั้น และจะถูกลบภายใน 60 วันหลังประกาศผล
+
+ขอขอบพระคุณในความร่วมมือครับ</pre>
+    </div>
+  </div>
+
+  <div class="attach"><b>ส่งอะไรพร้อมกัน</b> — แนบอินโฟกราฟิก &ldquo;ท่านคือคนที่ให้คะแนนมหาวิทยาลัย&rdquo; และการ์ดยืนยันตัวตนผู้จัดเก็บข้อมูลไปด้วย ข้อความที่มีภาพประกอบดูน่าเชื่อถือกว่าข้อความเปล่ามาก และผู้ตอบเก็บภาพไว้เปิดดูตอนมีสายเข้าได้</div>
+
+</main>
+
+<footer class="wrap">
+  <b>สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.)</b>
+  ฝ่ายเลขานุการคณะกรรมการดำเนินงาน EIT · มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร<br>
+  ต้องการข้อความสำหรับกลุ่มอื่นเพิ่มเติม แจ้ง สวท. ได้
+</footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.setAttribute('aria-selected',x===t));
+  document.querySelectorAll('.msg').forEach(m=>m.classList.toggle('on',m.id===t.dataset.m));
+}));
+
+document.querySelectorAll('.btn[data-c]').forEach(b=>b.addEventListener('click',()=>{
+  const txt=document.getElementById('t-'+b.dataset.c).innerText;
+  navigator.clipboard.writeText(txt).then(()=>{
+    b.textContent='คัดลอกแล้ว ✓'; b.classList.add('done');
+    setTimeout(()=>{b.textContent='คัดลอกข้อความ'; b.classList.remove('done');},2000);
+  }).catch(()=>{ b.textContent='คัดลอกไม่สำเร็จ'; setTimeout(()=>b.textContent='คัดลอกข้อความ',2000); });
+}));
+</script>
+</body>
+</html>
