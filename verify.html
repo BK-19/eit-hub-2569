@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ตรวจสอบก่อนคุย — แบบวัด EIT 2569 มทร.พระนคร</title>
+<meta name="description" content="วิธีตรวจสอบว่าผู้ที่ติดต่อมาเป็นผู้จัดเก็บข้อมูลแบบวัด EIT ของสำนักงาน ป.ป.ช. จริงหรือไม่ — ของจริงจะไม่ขอเลขบัญชี รหัส OTP หรือให้โอนเงิน">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร">
+<meta property="og:title" content="ตรวจสอบก่อนคุย — แบบวัด EIT 2569 มทร.พระนคร">
+<meta property="og:description" content="ผู้จัดเก็บข้อมูลตัวจริงจะไม่ขอเลขบัญชี รหัส OTP หรือให้โอนเงินโดยเด็ดขาด">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#4B1E6E; --purple2:#6C3B9C; --purple3:#8E5FB8;
+    --gold:#D98A0B; --goldbg:#FBF0DA;
+    --page:#F6F3FA; --tint:#EFEAF5; --line:#E2DCEC;
+    --ink:#2A2135; --gray:#6C6579;
+    --green:#1E8E4E; --greenbg:#E6F4EC;
+    --red:#C0392B; --redbg:#FBEAE7;
+    --shadow:0 2px 12px rgba(75,30,110,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--page);font-family:'Sarabun',sans-serif;color:var(--ink);line-height:1.65}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+  header{background:var(--purple);color:#fff;padding:15px 0}
+  .brand{font-family:'Prompt';font-weight:700;font-size:17.5px;line-height:1.35}
+  .brand small{display:block;font-family:'Sarabun';font-weight:400;font-size:13px;color:#D9C7EC;margin-top:2px}
+  .goldrule{height:4px;background:var(--gold)}
+
+  .hero{background:var(--purple);color:#fff;padding:0 0 34px}
+  .hero h1{font-family:'Prompt';font-weight:700;font-size:31px;line-height:1.28}
+  .hero p{color:#D9C7EC;font-size:16px;margin-top:10px}
+
+  main{padding:26px 0 50px}
+
+  .big{background:#fff;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px}
+  .big .top{padding:17px 22px;display:flex;gap:12px;align-items:center;
+    font-family:'Prompt';font-weight:600;font-size:18px;color:#fff}
+  .big.ok .top{background:var(--green)}
+  .big.no .top{background:var(--red)}
+  .big .top svg{flex:none}
+  .big ul{list-style:none;padding:16px 22px 20px}
+  .big li{display:flex;gap:12px;align-items:flex-start;font-size:16px;padding:9px 0;line-height:1.6}
+  .big li + li{border-top:1px solid var(--line)}
+  .big li i{flex:none;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:13px;font-weight:700;font-style:normal;color:#fff;margin-top:3px}
+  .big.ok li i{background:var(--green)}
+  .big.no li i{background:var(--red)}
+
+  .alarm{background:var(--redbg);border:2px solid var(--red);border-radius:14px;
+    padding:20px 24px;margin-bottom:18px;text-align:center}
+  .alarm h2{font-family:'Prompt';font-weight:700;font-size:20px;color:var(--red);margin-bottom:8px}
+  .alarm p{font-size:16.5px;line-height:1.6}
+  .alarm b{color:var(--red)}
+
+  .call{background:var(--purple);color:#fff;border-radius:14px;padding:24px;text-align:center;margin-bottom:18px}
+  .call .lab{font-size:15px;color:#D9C7EC}
+  .call .num{font-family:'Prompt';font-weight:700;font-size:32px;letter-spacing:.01em;margin:6px 0 2px;
+    display:inline-block;color:#fff;text-decoration:none}
+  .call .sub{font-size:14px;color:#D9C7EC}
+
+  .why{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+  .why h2{font-family:'Prompt';font-weight:600;font-size:17.5px;margin-bottom:11px}
+  .why dl{display:grid;gap:14px}
+  .why dt{font-family:'Prompt';font-weight:500;font-size:15.5px;color:var(--purple)}
+  .why dd{font-size:15px;color:var(--ink);margin-top:3px}
+
+  .pend{background:var(--goldbg);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;
+    padding:15px 18px;font-size:14.8px}
+  .pend b{color:#96600A}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;text-align:center;color:var(--gray);font-size:13.5px}
+  footer b{font-family:'Prompt';font-weight:600;color:var(--ink);display:block;font-size:15px;margin-bottom:4px}
+
+  @media (max-width:600px){
+    .hero h1{font-size:25px}
+    .big li{font-size:15.3px}
+    .call .num{font-size:27px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร<small>Rajamangala University of Technology Phra Nakhon</small></div>
+  </div>
+</header>
+<div class="goldrule"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>มีคนติดต่อมาเรื่องแบบวัด EIT<br>ของจริงหรือเปล่า</h1>
+    <p>ตรวจสอบได้ใน 1 นาที ก่อนตัดสินใจคุยต่อ</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="alarm">
+    <h2>สัญญาณอันตรายที่ชัดที่สุด</h2>
+    <p>ผู้จัดเก็บข้อมูลตัวจริง <b>จะไม่ขอเลขบัญชีธนาคาร รหัส OTP รหัสผ่าน<br>และจะไม่ให้ท่านโอนเงินโดยเด็ดขาด</b><br>หากมีการขอสิ่งเหล่านี้ ให้วางสายทันที</p>
+  </div>
+
+  <div class="big ok">
+    <div class="top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      ของจริงจะเป็นแบบนี้
+    </div>
+    <ul>
+      <li><i>✓</i><span>แนะนำตัวว่ามาจากหน่วยงานที่ <b>สำนักงาน ป.ป.ช. จ้างให้เก็บข้อมูล</b></span></li>
+      <li><i>✓</i><span>ยินดีให้ท่าน <b>ขอดูบัตรประจำตัวและหนังสือมอบหมาย</b></span></li>
+      <li><i>✓</i><span>ถามถึง <b>ประสบการณ์ที่ท่านเคยติดต่อกับมหาวิทยาลัย</b> เท่านั้น</span></li>
+      <li><i>✓</i><span>ให้เวลาท่านตัดสินใจ <b>ปฏิเสธได้โดยไม่มีผลกระทบ</b></span></li>
+      <li><i>✓</i><span>ยอมให้ท่าน <b>วางสายไปตรวจสอบก่อน</b> แล้วค่อยติดต่อกลับ</span></li>
+    </ul>
+  </div>
+
+  <div class="big no">
+    <div class="top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      ของจริงจะไม่ทำแบบนี้
+    </div>
+    <ul>
+      <li><i>✕</i><span>ขอ <b>เลขบัญชีธนาคาร รหัส OTP หรือรหัสผ่าน</b></span></li>
+      <li><i>✕</i><span>ให้ <b>โอนเงิน</b> หรือแจ้งว่าท่านจะได้รับเงินรางวัล</span></li>
+      <li><i>✕</i><span>ส่งลิงก์ให้ <b>ติดตั้งแอปพลิเคชัน</b> หรือกดยืนยันสิทธิ์</span></li>
+      <li><i>✕</i><span>ขอ <b>สำเนาบัตรประชาชนหรือเลขบัตร 13 หลัก</b></span></li>
+      <li><i>✕</i><span><b>เร่งรัด ข่มขู่</b> หรือบอกว่าไม่ตอบแล้วจะเสียสิทธิ์</span></li>
+    </ul>
+  </div>
+
+  <div class="call">
+    <div class="lab">ไม่แน่ใจ ให้วางสายแล้วโทรตรวจสอบกับมหาวิทยาลัย</div>
+    <a class="num" href="tel:026653777">0 2665 3777 ต่อ 6604</a>
+    <div class="sub">สำนักส่งเสริมวิชาการและงานทะเบียน · จันทร์–ศุกร์ 08:30–16:30</div>
+  </div>
+
+  <div class="why">
+    <h2>คำถามที่มักสงสัย</h2>
+    <dl>
+      <dt>ทำไมฉันถึงถูกติดต่อ</dt>
+      <dd>ท่านเคยติดต่อหรือรับบริการจากมหาวิทยาลัยในปีงบประมาณ 2569 หน่วยงานจึงเสนอชื่อตามเกณฑ์ที่สำนักงาน ป.ป.ช. กำหนด</dd>
+
+      <dt>ตอบแล้วมีผลกับฉันไหม</dt>
+      <dd>ไม่มีผลใด ๆ การประเมินนี้วัดการทำงานของมหาวิทยาลัย ไม่ได้วัดตัวท่าน และไม่กระทบการติดต่อในอนาคต</dd>
+
+      <dt>มหาวิทยาลัยเห็นคำตอบของฉันไหม</dt>
+      <dd>ไม่เห็น มหาวิทยาลัยได้รับเฉพาะคะแนนภาพรวม ไม่ทราบว่าคำตอบใดมาจากใคร</dd>
+
+      <dt>ไม่อยากตอบได้ไหม</dt>
+      <dd>ได้ การเข้าร่วมเป็นไปโดยสมัครใจ ปฏิเสธได้โดยไม่มีผลกระทบใด ๆ</dd>
+
+      <dt>ข้อมูลของฉันถูกเก็บนานแค่ไหน</dt>
+      <dd>ใช้เพื่อการประเมินครั้งนี้เท่านั้น และจะถูกลบภายใน 60 วันหลังประกาศผล</dd>
+    </dl>
+  </div>
+
+  <div class="pend"><b>ข้อมูลผู้จัดเก็บ</b> — เมื่อสำนักงาน ป.ป.ช. แจ้งชื่อหน่วยงานผู้จัดเก็บและกำหนดการเก็บข้อมูลแล้ว มหาวิทยาลัยจะเพิ่มรายละเอียดไว้ที่หน้านี้ ท่านตรวจสอบซ้ำได้ทุกเมื่อ</div>
+
+</main>
+
+<footer class="wrap">
+  <b>สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.)</b>
+  มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร<br>
+  หน้านี้จัดทำเพื่อให้ผู้มีส่วนได้ส่วนเสียภายนอกตรวจสอบความถูกต้องก่อนให้ข้อมูล
+</footer>
+
+</body>
+</html>
