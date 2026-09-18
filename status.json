@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-17T05:06:48.503Z",
+  "updatedAt": "2026-09-18T02:33:14.953Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
-    "daysLeft": 1,
+    "daysLeft": 0,
     "passed": false
   },
   "totalQuota": 147,
-  "totalCollected": 43,
-  "unitsStarted": 9,
+  "totalCollected": 62,
+  "unitsStarted": 13,
   "unitsTotal": 15,
   "units": [
     {
@@ -41,16 +41,16 @@
     {
       "unit": "คณะบริหารธุรกิจ",
       "quota": 8,
-      "collected": 0,
-      "remaining": 8,
-      "pct": 0
+      "collected": 13,
+      "remaining": 0,
+      "pct": 163
     },
     {
       "unit": "คณะเทคโนโลยีคหกรรมศาสตร์",
       "quota": 6,
-      "collected": 0,
-      "remaining": 6,
-      "pct": 0
+      "collected": 2,
+      "remaining": 4,
+      "pct": 33
     },
     {
       "unit": "สำนักวิทยบริการและเทคโนโลยีสารสนเทศ (สวส.)",
@@ -69,9 +69,9 @@
     {
       "unit": "คณะครุศาสตร์อุตสาหกรรม",
       "quota": 2,
-      "collected": 0,
-      "remaining": 2,
-      "pct": 0
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
     },
     {
       "unit": "คณะเทคโนโลยีสื่อสารมวลชน",
@@ -83,16 +83,16 @@
     {
       "unit": "คณะวิทยาศาสตร์และเทคโนโลยี",
       "quota": 2,
-      "collected": 0,
-      "remaining": 2,
-      "pct": 0
+      "collected": 1,
+      "remaining": 1,
+      "pct": 50
     },
     {
       "unit": "คณะวิศวกรรมศาสตร์",
       "quota": 2,
-      "collected": 1,
-      "remaining": 1,
-      "pct": 50
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
     },
     {
       "unit": "คณะศิลปศาสตร์",
