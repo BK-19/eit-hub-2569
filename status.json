@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-18T08:13:32.601Z",
+  "updatedAt": "2026-09-18T09:13:33.140Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": 0,
     "passed": false
   },
   "totalQuota": 147,
-  "totalCollected": 74,
+  "totalCollected": 78,
   "unitsStarted": 14,
   "unitsTotal": 15,
   "units": [
@@ -34,9 +34,9 @@
     {
       "unit": "สถาบันวิจัยและพัฒนา (สวพ.)",
       "quota": 10,
-      "collected": 6,
-      "remaining": 4,
-      "pct": 60
+      "collected": 10,
+      "remaining": 0,
+      "pct": 100
     },
     {
       "unit": "คณะบริหารธุรกิจ",
