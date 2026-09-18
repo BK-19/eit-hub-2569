@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-18T03:13:36.406Z",
+  "updatedAt": "2026-09-18T04:13:33.091Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": 0,
     "passed": false
   },
   "totalQuota": 147,
-  "totalCollected": 66,
+  "totalCollected": 67,
   "unitsStarted": 13,
   "unitsTotal": 15,
   "units": [
@@ -83,9 +83,9 @@
     {
       "unit": "คณะวิทยาศาสตร์และเทคโนโลยี",
       "quota": 2,
-      "collected": 1,
-      "remaining": 1,
-      "pct": 50
+      "collected": 2,
+      "remaining": 0,
+      "pct": 100
     },
     {
       "unit": "คณะวิศวกรรมศาสตร์",
