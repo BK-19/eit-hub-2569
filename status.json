@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-18T09:13:33.140Z",
+  "updatedAt": "2026-09-18T10:13:35.801Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": 0,
     "passed": false
   },
   "totalQuota": 147,
-  "totalCollected": 78,
+  "totalCollected": 79,
   "unitsStarted": 14,
   "unitsTotal": 15,
   "units": [
@@ -41,9 +41,9 @@
     {
       "unit": "คณะบริหารธุรกิจ",
       "quota": 8,
-      "collected": 13,
+      "collected": 14,
       "remaining": 0,
-      "pct": 163
+      "pct": 175
     },
     {
       "unit": "คณะเทคโนโลยีคหกรรมศาสตร์",
