@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-18T16:13:33.923Z",
+  "updatedAt": "2026-09-18T17:13:35.145Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
-    "daysLeft": 0,
-    "passed": false
+    "daysLeft": -1,
+    "passed": true
   },
   "totalQuota": 147,
   "totalCollected": 79,
