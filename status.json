@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-18T02:33:14.953Z",
+  "updatedAt": "2026-09-18T03:13:36.406Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": 0,
     "passed": false
   },
   "totalQuota": 147,
-  "totalCollected": 62,
+  "totalCollected": 66,
   "unitsStarted": 13,
   "unitsTotal": 15,
   "units": [
@@ -48,9 +48,9 @@
     {
       "unit": "คณะเทคโนโลยีคหกรรมศาสตร์",
       "quota": 6,
-      "collected": 2,
-      "remaining": 4,
-      "pct": 33
+      "collected": 6,
+      "remaining": 0,
+      "pct": 100
     },
     {
       "unit": "สำนักวิทยบริการและเทคโนโลยีสารสนเทศ (สวส.)",
