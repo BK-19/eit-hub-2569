@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-09-21T06:13:32.270Z",
+  "updatedAt": "2026-09-21T07:13:37.461Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": -3,
     "passed": true
   },
   "totalQuota": 147,
-  "totalCollected": 79,
-  "unitsStarted": 14,
+  "totalCollected": 82,
+  "unitsStarted": 15,
   "unitsTotal": 15,
   "units": [
     {
       "unit": "กองพัฒนานักศึกษา",
       "quota": 75,
-      "collected": 0,
-      "remaining": 75,
-      "pct": 0
+      "collected": 3,
+      "remaining": 72,
+      "pct": 4
     },
     {
       "unit": "กองกลาง",
