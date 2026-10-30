@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-30T03:13:35.083Z",
+  "updatedAt": "2026-10-30T04:13:35.867Z",
   "deadline": {
     "label": "18 ก.ย. 2569",
     "daysLeft": -42,
     "passed": true
   },
   "totalQuota": 147,
-  "totalCollected": 140,
+  "totalCollected": 141,
   "unitsStarted": 15,
   "unitsTotal": 15,
   "units": [
@@ -20,9 +20,9 @@
     {
       "unit": "กองกลาง",
       "quota": 15,
-      "collected": 1,
-      "remaining": 14,
-      "pct": 7
+      "collected": 2,
+      "remaining": 13,
+      "pct": 13
     },
     {
       "unit": "กองคลัง",
